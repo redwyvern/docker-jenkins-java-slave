@@ -23,9 +23,6 @@ RUN git config --global user.name "${GIT_USER}" && \
 
 USER root
 
-
-COPY settings.xml /home/jenkins/.m2/settings.xml
-
 # Copy over the Maven settings.xml file and make sure all jenkins files are owned by jenkins
 RUN 	mkdir /home/jenkins/.m2 2>/dev/null && cp /root/settings.xml /home/jenkins/.m2 && \
         chown -R jenkins.jenkins /home/jenkins
