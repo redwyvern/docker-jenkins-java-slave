@@ -16,8 +16,8 @@
   <profiles>
     <profile>
       <properties>
-        <deploy.release.local.url>${env.DEPLOY_RELEASE_LOCAL_URL}</deploy.release.local.url>
-        <deploy.snapshot.local.url>${env.DEPLOY_SNAPSHOT_LOCAL_URL}</deploy.snapshot.local.url>
+        <deploy.release.local.url>${env.ARTIFACTORY_URL}/artifactory/libs-release-local</deploy.release.local.url>
+        <deploy.snapshot.local.url>${env.ARTIFACTORY_URL}/artifactory/libs-snapshot-local</deploy.snapshot.local.url>
       </properties>        
       <repositories>
         <repository>
@@ -26,13 +26,13 @@
           </snapshots>
           <id>central</id>
           <name>libs-release</name>
-          <url>http://artifactory.weedon.org.au/artifactory/libs-release</url>
+          <url>${env.ARTIFACTORY_URL}/artifactory/libs-release</url>
         </repository>
         <repository>
           <snapshots />
           <id>snapshots</id>
           <name>libs-snapshot</name>
-          <url>http://artifactory.weedon.org.au/artifactory/libs-snapshot</url>
+          <url>${env.ARTIFACTORY_URL}/artifactory/libs-snapshot</url>
         </repository>
       </repositories>
       <pluginRepositories>
@@ -42,13 +42,13 @@
           </snapshots>
           <id>central</id>
           <name>libs-release</name>
-          <url>http://artifactory.weedon.org.au/artifactory/libs-release</url>
+          <url>${env.ARTIFACTORY_URL}/artifactory/libs-release</url>
         </pluginRepository>
         <pluginRepository>
           <snapshots />
           <id>snapshots</id>
           <name>libs-snapshot</name>
-          <url>http://artifactory.weedon.org.au/artifactory/libs-snapshot</url>
+          <url>${env.ARTIFACTORY_URL}/artifactory/libs-snapshot</url>
         </pluginRepository>
       </pluginRepositories>
       <id>artifactory</id>
