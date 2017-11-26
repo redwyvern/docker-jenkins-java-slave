@@ -16,7 +16,8 @@
   <profiles>
     <profile>
       <properties>
-        <deploy.url>${env.DEPLOY_URL}</deploy.url>
+        <deploy.release.local.url>${env.DEPLOY_RELEASE_LOCAL_URL}</deploy.release.local.url>
+        <deploy.snapshot.local.url>${env.DEPLOY_SNAPSHOT_LOCAL_URL}</deploy.snapshot.local.url>
       </properties>        
       <repositories>
         <repository>
