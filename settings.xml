@@ -15,6 +15,9 @@
   </servers>
   <profiles>
     <profile>
+      <properties>
+        <deploy.url>${env.DEPLOY_URL}</deploy.url>
+      </properties>        
       <repositories>
         <repository>
           <snapshots>
